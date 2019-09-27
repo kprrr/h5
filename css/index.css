@@ -1,0 +1,226 @@
+.jd_layout{
+    width: 100%;
+    /* 最大宽度 */
+    max-width: 640px;
+    /* 最小宽度 */
+    min-width: 320px;
+    margin: 0 auto;
+    background-color: #eee;
+}
+
+/* 顶部搜索块 */
+.jd_search{
+    width: 100%;
+    max-width: 640px;
+    height: 40px;
+    /* 固定在顶部 */
+    position: fixed; 
+    /* background: #e92322;  */
+    background-color: rgba(233, 35,34, 0);
+    z-index: 999;
+}
+.jd_log{
+    width: 56px;
+    height: 30px;
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    background: url(../images/sprites.png);
+    background-size: 200px 200px;
+    background-position: 0 -108px;
+}
+.jd_login{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height:40px;
+    color: #ffffff;
+}
+.jd_searchBox{
+    width: 100%;
+    height: 100%;
+    padding-left: 76px;
+    padding-right: 50px;
+    /* 添加边框阴影 */
+    box-shadow: 1px 1px 1px #cccccc;
+}
+.jd_searchBox > input {
+    width: 100%;
+    height: 30px;
+    margin-top: 5px;
+    border-radius: 15px;
+    padding-left: 30px;
+    color: #666;
+}
+/* 使用伪元素添加放大镜  */
+.jd_searchBox::before{
+    content: "";
+    width: 27px;
+    height: 23px;
+    position: absolute;
+    background: url(../images/sprites.png);
+    background-size: 200px 200px;
+    background-position: -56px -108px;
+    left: 80px;
+    top: 9px;
+}
+
+/* 轮播图样式 */
+.jd_banner{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.jd_bannerImg{
+    width: 800%;
+}
+
+.jd_bannerImg > li {
+    width: 12.5%;
+    float: left;
+}
+
+.jd_bannerImg > li img{
+    width: 100%;
+    display:block;
+}
+.jd_bannerIndicator{
+    width: 128px;
+    height: 10px;
+    position: absolute;
+    bottom: 5px;
+    /* 任意元素居中 */
+    left: 50%;
+    transform: translateX(-50%);
+} 
+.jd_bannerIndicator > li{
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    border: 1px solid #fff;
+    float: left;
+    margin-left: 10px;
+}
+.jd_bannerIndicator > li:first-of-type{
+    margin-left: 0
+}
+.jd_bannerIndicator > li.active{
+    background-color: #fff;
+}
+.jd_nav{
+    width: 100%;
+    background-color: #fff;
+    padding: 10px 0;
+}
+
+.jd_nav  li{
+    width: 25%;
+    float: left;
+    text-align: center;
+    margin: 5px 0;
+}
+.jd_nav li img{
+    width: 50px;
+}
+.jd_nav li p {
+    line-height: 20px;
+}
+
+.jd_superMarket{
+    width: 100%;
+    margin-top: 5px;
+    background-color: #fff;
+}
+.jd_superMarket > .jd_market_tips{
+    width: 100%;
+    height: 30px;
+    border-bottom: 1px solid #666;
+    font-size: 16px;
+    
+    line-height: 30px;
+}
+.jd_superMarket>.jd_market_tips > h3{
+    color: #666;
+    position: relative;
+    padding-left: 30px;
+}
+
+
+.jd_superMarket>.jd_market_tips > h3::before{
+    content: "";
+    width: 3px;
+    height: 15px;
+    position: absolute;
+    background-color: #e92322;
+    top: 8px;
+    left: 22px;
+}
+
+/* 产品块图片超链接 */
+.jd_market_content {
+    width: 100%;
+    background-color: #fff;
+    
+}
+.jd_market_content > a {
+    width: 50%;
+    display: block;
+}
+.jd_market_content a img{
+    width: 100%;
+}
+
+.b_left{
+    border-left: 1px solid #666;
+}
+.b_bottom{
+    border-bottom: 1px solid #666;
+}
+.jd_tips_sk_left >.sk_icon{
+    margin-left: 10px;
+    
+}
+.jd_tips_sk_left >.sk_icon >img{
+    width: 16px;
+    height: 20px;
+    margin-top: 3px;
+    background-size: 16px 20px;
+}
+.sk_text{
+    color: #e92322;
+}
+.sk_time > span{
+    width: 16px;
+    display: inline-block;
+    line-height: 18px;
+    background-color: #000000;
+    color:#fff;
+    text-align: center;
+}
+
+/* 查找3的倍数 */
+.sk_time > span:nth-last-of-type(3n){
+    width: 8px;
+    color: #000;
+    background-color: transparent;
+}
+.jd_sk .jd_market_content{
+    width: 100%;
+    padding: 20px;
+}
+.jd_sk .jd_market_content ul{
+    width: 100%;
+}
+.jd_sk .jd_market_content > ul > li{
+    width: 33.33%;
+    float: left;
+    /* 居中显示 */
+    text-align: center;
+}
+.jd_sk .jd_market_content > ul > li img{
+    width: 70%;
+    display: inline-block;
+}

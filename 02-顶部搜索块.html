@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/base.css">
+    <title>Document</title>
+    <style>
+        .jd_layout {
+            width: 100%;
+            /* 最大宽度 */
+            max-width: 640px;
+            /* 最小宽度 */
+            min-width: 320px;
+            height: 1000px;
+            margin: 0 auto;
+            background-color: #cccccc;
+        }
+
+        .jd_search {
+            width: 100%;
+            height: 40px;
+            background-color: #ccc;
+            position: relative;
+        }
+
+        .jd_log {
+            width: 100px;
+            height: 100%;
+            display: block;
+            background-color: green;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .jd_login {
+            width: 100px;
+            height: 100%;
+            display: block;
+            background-color: blue;
+            position: absolute;
+            top: 0;
+            right: 0;
+
+        }
+
+        /* .jd_searchBox {
+            !* 宽度参照父容器，不能人为设置具体的宽度值 *!
+            margin: 0 100px;
+            height: 100%;
+            background-color: red;
+        } */
+
+        .jd_searchBox {
+            width: 100%;
+            height: 100%;
+            padding: 0px 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="jd_layout">
+        <!--搜索块-->
+        <div class="jd_search">
+            <a href="javascript:;" class="jd_log"></a>
+            <form action="" class="jd_searchBox">
+                <input type="text">
+            </form>
+            <a href="javascript:;" class="jd_login">登录</a>
+        </div>
+        <!--轮播图-->
+        <div class="jd_banner"></div>
+        <!--导航块-->
+        <div class="jd_nav"></div>
+        <!--产品块-->
+        <div class="jd_product"></div>
+    </div>
+</body>
+
+</html>
