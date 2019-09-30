@@ -1,21 +1,37 @@
-1.�������ø�Ԫ�ص��Զ��߶����ʧЧ
-����취������Ԫ��ul ���� clearfix
+1.浮动会让父元素的自动高度填充失效
+解决办法：给父元素ul 添加 clearfix
 
-2.�ı����� �ײ���϶ 
-�����ʽ��1.����Ϊ��Ԫ��
-		2.���Խ��ı��������С����Ϊ0
-		3.vertical-align��bottom
+2.文本基线 底部空隙 
+清除方式：1.设置为块元素
+		2.可以将文本的字体大小设置为0
+		3.vertical-align：bottom
 		
-3.> ������ 
+3.> 的作用 
 
-4.span��ʲôԪ��
-ͨ�׵ؽ�����������滹��������ǩ��ʱ�����div���������ֻ���ı���Ӧ����span
-div��һ���鼶Ԫ�أ�����ΪHTML�ĵ��ڴ��������ṩ�ṹ�ͱ���
+4.span是什么元素
+通俗地讲就是如果里面还有其他标签的时候就用div，如果里面只有文本就应该用span
+div是一个块级元素，用来为HTML文档内大块的内容提供结构和背景
 
-span������Ԫ�أ������ڶ���һ������Ҳ����һ���ڿ��Ա�<span>���ֺü�������
-����Ҫspan���п������ԣ�block��������Ҫ����ͬһ�У���ʹ�� display: inline-block;
+span是行内元素，在行内定义一个区域（也就是一行内可以被<span>划分好几个区域）
+当需要span即有宽高属性（block），又需要放在同一行，就使用 display: inline-block;
 
-�����Ŀ鼶Ԫ���� DIV, FORM, TABLE, P, PRE, H1~H6, DL, OL, UL �ȡ�
-����������Ԫ���� SPAN, A, STRONG, EM, LABEL, INPUT, SELECT, TEXTAREA, IMG, BR �ȡ�
-5.background-color ����
-transparent	Ĭ�ϡ�������ɫΪ͸����
+常见的块级元素有 DIV, FORM, TABLE, P, PRE, H1~H6, DL, OL, UL 等。
+常见的内联元素有 SPAN, A, STRONG, EM, LABEL, INPUT, SELECT, TEXTAREA, IMG, BR 等。
+5.background-color 属性
+transparent	默认。背景颜色为透明。
+
+6.比较width 与 offsetWidth 的区别
+6.1、offsetWidth > width
+element.offsetWidth = element.style.width + element.style.padding + element.style.border；（不包括margin）
+6.2、offsetWidth 属性仅仅可读，而style.width 是可写的；
+所以通常用 style.width用作进JavaScript中设置元素的宽度，而offsetWidth不可以。
+
+7.渐变色-水平渐变
+background:linear-gradient(to right,red,blue);
+
+8.手指对象的坐标值
+screenX/screenY是手指的触摸点相对于屏幕左上角的坐标距离
+clientX/clientY 相对于当前视口-移动端屏幕
+pageX/pageY 相当于当前页面的内容--会有滚动条--包含滚动条的
+
+9.touch事件的触发，必须保证元素有具体的宽高，如何宽或高为0，则不会触发。这时如果元素有浮动属性（left或者postion），需要清楚浮动
