@@ -1,0 +1,21 @@
+1.浮动会让父元素的自动高度填充失效
+解决办法：给父元素ul 添加 clearfix
+
+2.文本基线 底部空隙 
+清除方式：1.设置为块元素
+		2.可以将文本的字体大小设置为0
+		3.vertical-align：bottom
+		
+3.> 的作用 
+
+4.span是什么元素
+通俗地讲就是如果里面还有其他标签的时候就用div，如果里面只有文本就应该用span
+div是一个块级元素，用来为HTML文档内大块的内容提供结构和背景
+
+span是行内元素，在行内定义一个区域（也就是一行内可以被<span>划分好几个区域）
+当需要span即有宽高属性（block），又需要放在同一行，就使用 display: inline-block;
+
+常见的块级元素有 DIV, FORM, TABLE, P, PRE, H1~H6, DL, OL, UL 等。
+常见的内联元素有 SPAN, A, STRONG, EM, LABEL, INPUT, SELECT, TEXTAREA, IMG, BR 等。
+5.background-color 属性
+transparent	默认。背景颜色为透明。
