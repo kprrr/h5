@@ -59,3 +59,11 @@ input{
 .decoration {
     text-decoration:line-through;
 }
+
+/* 3.清楚样式 */
+.noTransition{
+    -moz-transition: none;
+    -webkit-transition: none;
+    -o-transition: color 0 ease-in;
+    transition: none;
+}
