@@ -35,3 +35,24 @@ clientX/clientY 相对于当前视口-移动端屏幕
 pageX/pageY 相当于当前页面的内容--会有滚动条--包含滚动条的
 
 9.touch事件的触发，必须保证元素有具体的宽高，如何宽或高为0，则不会触发。这时如果元素有浮动属性（left或者postion），需要清楚浮动
+
+10.定制化zepto
+10.1 cd zepto master目录
+10.2 修改make文件，target.build修改
+ modules = (env['MODULES'] || 'zepto event ajax form ie touch selector fx').split(' ')
+ 10.3 命令行在该目录下运行 npm run-script dist
+ 10.4 目录dist内zepto.min.js即是集成打包好的文件
+
+ 11.全屏页面的实现 
+ 即指内容不能超过viewport的大小
+ html,body{
+     width:100%;
+     height:100%;
+ }
+ .内容div{
+     width:100%;
+     height:100%;
+ }
+
+ 12.定位的特点
+ 定位是参照父容器来定位的，如果父容器是全屏的，所以高度也是参照父容器的高度

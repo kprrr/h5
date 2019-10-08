@@ -75,6 +75,19 @@ function bannerEffect() {
     // window.onresize = function () {
 
     // }
+
+    //轮播图点标记设置函数
+    var setIndicator = function(index){
+        var indicators = banner.querySelector(".jd_bannerIndicator")
+        .querySelectorAll("li");
+        for(var i = 0 ;i< indicators.length;i++) {
+            indicators[i].classList.remove("active");
+        }
+        indicators[index-1].classList.add("active");
+    };
+
+
+
     var index = 1;
     var timer = function () {
         return setInterval(() => {
@@ -179,8 +192,8 @@ function bannerEffect() {
     });
 
     //使用 webkitTransitionEnd ，可以监听当前元素的过渡效果执行完毕，当一个元素的过渡效果执行完毕后，会触发这个事件
-    // imgBox.addEventListener("webkitTransitionEnd",function name(params) {
-        
-    // })
+    imgBox.addEventListener("webkitTransitionEnd",function () {
+       setIndicator(index); 
+    });
 
 }
