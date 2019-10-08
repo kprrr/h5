@@ -56,3 +56,16 @@ pageX/pageY 相当于当前页面的内容--会有滚动条--包含滚动条的
 
  12.定位的特点
  定位是参照父容器来定位的，如果父容器是全屏的，所以高度也是参照父容器的高度
+
+ 13.category.css 中ct_hotCategory 无法使用 overflow: hidden 的原因
+使用 overflow: hidden的前提，需要确定该内容的宽高值，但此时获取不到毛衣数据
+的具体宽高，所以无效,所以此时需要使用 伸缩盒子 ,步骤(固定写法)：
+13.1 父容器 .ct_cRight {
+    display:flex;
+    //垂直放置
+    flex-direction:colunm;
+}
+13.2 内容 .ct_hotCategory{
+     overflow: hidden;
+    flex:1;
+}
