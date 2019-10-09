@@ -69,3 +69,23 @@ pageX/pageY 相当于当前页面的内容--会有滚动条--包含滚动条的
      overflow: hidden;
     flex:1;
 }
+
+14.对于父容器做滑动操作,步骤：
+1.需要对父容器做相对定位，子容器做绝对定位
+父容器：{
+    position:relative;
+}
+自容器：{
+    position:absolute;
+    left:0;
+    top:0;
+}
+2.清楚滑动效果样式，以防滑动出现延迟
+3.使用top/left/right/bottom进行滑动操作
+
+15.移动端click事件延迟
+需求：
+15.1 在pc和移动端都能响应 --click
+15.2 不能点透 --click（因为click是同时响应，touch是优先响应）
+15.3 操作不能有延迟 -- touch
+使用fastclick：在pc端也能响应，解决延迟问题
