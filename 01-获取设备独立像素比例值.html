@@ -11,5 +11,14 @@
 </body>
 <script>
      console.log(window.devicePixelRatio);
+     getlatandlong=()=> {alert('经度：'+this._position.lat,'维度：'+this._position)}
+ 
+ getLocation=()=>{
+  if (navigator.geolocation){
+    navigator.geolocation.getCurrentPosition(this.showPosition,this.showError);
+  }else{
+    alert("浏览器不支持地理定位");
+  }
+}
 </script>
 </html>

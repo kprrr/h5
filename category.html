@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/category.css">
     <title>Document</title>
+    <script src="./lib/zepto.min.js"></script>
+    <script src="./lib/iscroll.js"></script>
+    <script src="./js/category.js"></script>
+    <script src="./lib/fastclick.js"></script>
 </head>
 
 <body>
@@ -64,7 +68,7 @@
                     <li class="">
                         <a href="javascript:;">内衣配饰</a>
                     </li>
-                    <li class="active">
+                    <li class="">
                         <a href="javascript:;">热门推荐</a>
                     </li>
                     <li class="">
@@ -80,8 +84,8 @@
                     <img src="./images/banner_1.jpg" alt="">
                 </a>
                 <h3>热门分类</h3>
-                <div class="ct_hotCategory">
-                    <ul>
+                <div class="ct_hotCategory" style="position: relative">
+                    <ul style="overflow: hidden">
                         <li class="">
                             <a href="javascript:;">
                                 <img src="./images/nv-fy.jpg" alt="">

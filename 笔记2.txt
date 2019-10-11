@@ -1,6 +1,0 @@
-1.比较width 与 offsetWidth 的区别
-1、offsetWidth > width
-element.offsetWidth = element.style.width + element.style.padding + element.style.border；（不包括margin）
-2、offsetWidth 属性仅仅可读，而style.width 是可写的；
-所以通常用 style.width用作进JavaScript中设置元素的宽度，而offsetWidth不可以。
-
